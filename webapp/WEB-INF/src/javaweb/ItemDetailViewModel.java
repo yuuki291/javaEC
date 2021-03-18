@@ -1,12 +1,16 @@
 package javaweb;
 
+
 public class ItemDetailViewModel {
 
 	private String itemCd;
 
+	private Cart cart = new ShoppingCart();
+
 	public ItemDetailViewModel(String itemCd){
 
 		this.itemCd = itemCd;
+
 	}
 
 	public Item itemDetail(){
@@ -19,5 +23,14 @@ public class ItemDetailViewModel {
 
 		return item;
 	}
+
+	public Cart shoppingCart() {
+		 return cart;
+	}
+
+	public void saveCart(Cart cart) {
+		this.cart = cart;
+	}
+
 
 }
